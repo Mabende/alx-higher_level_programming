@@ -1,0 +1,9 @@
+#!/usr/bin/python3
+""" Contains empty class Square """
+
+
+class Square:
+    """
+    This is a simple empty class that represents a square.
+    """
+    pass
