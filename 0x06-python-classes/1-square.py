@@ -1,11 +1,16 @@
 #!/usr/bin/python3
 """
-Module that defines the Square class.
+module that Write a class Square
+that defines a square based on 0-square.py
 """
 
-class Square:
-    """Class that defines a square."""
-    def __init__(self, size):
-        """Initializes a new Square instance with a given size."""
-        self.__size = size
 
+class Square:
+    """class that defines a square"""
+    def __init__(self, size):
+        self.__size = size
+        """
+        Private instance attribute: size
+        Instantiation with size
+        (no type/value verification)
+        """
