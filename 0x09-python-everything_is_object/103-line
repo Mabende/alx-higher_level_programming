@@ -1,0 +1,26 @@
+#!/usr/bin/python3
+
+line1_count = 0
+a = "SCHL"
+line1_count += 1
+
+line2_count = 0
+b = "SCHL"
+line2_count += 1
+
+line3_deleted = "No"
+del a
+
+line4_deleted = "No"
+del b
+
+line5_count = 0
+c = "SCHL"
+line5_count += 1
+
+print("Number of string objects created by the execution of the first line:", line1_count)
+print("Number of string objects created by the execution of the second line:", line2_count)
+print("After the execution of line 3, is the string object pointed by a deleted?", line3_deleted)
+print("After the execution of line 4, is the string object pointed by b deleted?", line4_deleted)
+print("Number of string objects created by the execution of the last line:", line5_count)
+
