@@ -1,0 +1,10 @@
+#!/usr/bin/python3
+
+# Number of string objects created by the execution of the first line
+line1_count = 0
+a = "SCHL"
+line1_count += 1
+
+with open("106-line1.txt", "w") as file:
+    file.write(str(line1_count))
+

@@ -1,0 +1,10 @@
+#!/usr/bin/python3
+
+# Number of string objects created by the execution of the second line
+line2_count = 0
+b = "SCHL"
+line2_count += 1
+
+with open("106-line2.txt", "w") as file:
+    file.write(str(line2_count))
+

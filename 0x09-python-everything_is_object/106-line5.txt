@@ -1,0 +1,10 @@
+#!/usr/bin/python3
+
+# Number of string objects created by the execution of the last line
+line5_count = 0
+c = "SCHL"
+line5_count += 1
+
+with open("106-line5.txt", "w") as file:
+    file.write(str(line5_count))
+

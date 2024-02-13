@@ -1,0 +1,10 @@
+#!/usr/bin/python3
+
+# After the execution of line 3, is the string object pointed by a deleted?
+line3_deleted = "No"
+a = "SCHL"
+del a
+
+with open("106-line3.txt", "w") as file:
+    file.write(line3_deleted)
+
