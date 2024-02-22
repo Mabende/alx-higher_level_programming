@@ -1,17 +1,12 @@
 #!/usr/bin/python3
-"""
-    class MyList
-"""
+MyList = __import__('1-my_list').MyList
 
-
-class MyList(list):
-    """
-        The class inherits from list.
-        Methods:
-            print_sorted- it prints the list in ascending order
-    """
-    def print_sorted(self):
-        """
-            it prints list in ascending order
-        """
-        print(sorted(self))
+my_list = MyList()
+my_list.append(1)
+my_list.append(4)
+my_list.append(2)
+my_list.append(3)
+my_list.append(5)
+print(my_list)
+my_list.print_sorted()
+print(my_list)
