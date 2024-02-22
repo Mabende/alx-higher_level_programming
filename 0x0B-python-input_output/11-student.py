@@ -1,21 +1,16 @@
 #!/usr/bin/python3
 """
-    11-student: Student class with JSON serialization and deserialization
+class module
 """
 
 
 class Student:
     """
-        Defines a student by first_name, last_name, and age.
+    student class module
     """
-
     def __init__(self, first_name, last_name, age):
         """
-            Initializes a Student instance.
-            Args:
-                first_name (str): The first name of the student.
-                last_name (str): The last name of the student.
-                age (int): The age of the student.
+        instantation
         """
         self.first_name = first_name
         self.last_name = last_name
@@ -23,22 +18,27 @@ class Student:
 
     def to_json(self, attrs=None):
         """
-            Retrieves a dictionary representation of a Student instance.
-            Args:
-                attrs (list, optional): List of attribute names to retrieve.
-                                        Defaults to None.
-            Returns:
-                dict: Dictionary representation of the Student instance.
+        retrieves dictionary representation
         """
-        if attrs is not None and all(isinstance(attr, str) for attr in attrs):
-            return {attr: getattr(self, attr) for attr in attrs if hasattr(self, attr)}
-        return self.__dict__
+        my_list = self.__dict__
+        stringdict_ = dict()
+
+        if type(attrs) is list:
+            for attr in attrs:
+                if type(attr) is not str:
+                    return my_list
+
+                if attr in my_list:
+                    stringdict_[attr] = my_list[attr]
+
+            return stringdict_
+
+        return my_list
 
     def reload_from_json(self, json):
         """
-            Replaces all attributes of the Student instance.
-            Args:
-                json (dict): Dictionary containing attribute-value pairs.
+        replaces all attributes of the student instance
         """
-        for key, value in json.items():
-            setattr(self, key, value)
+        for i in json:
+            if i in self.__dict__.keys():
+                self.__dict__[i] = json[i]
