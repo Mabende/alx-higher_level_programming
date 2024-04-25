@@ -1,9 +1,11 @@
 #!/usr/bin/node
-const myArg = process.argv.slice(2);
-let overallMax = 0;
-if(myArg.length > 1){
-	const integers = myArg.map(Number);
-	integers.sort((a, b) => b - a);
-	overallMax = integers[1];
+
+const args = process.argv.slice(2);
+
+if (args.length <= 1) {
+  console.log(0);
+} else {
+  const numbers = args.map(Number);
+  numbers.sort((a, b) => b - a);
+  console.log(numbers[1]);
 }
-console.log(overallMax);
